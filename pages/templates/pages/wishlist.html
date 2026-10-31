@@ -1,0 +1,55 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olive & June | Wishlist</title>
+    <link rel="stylesheet" href="{% static 'pages/style.css' %}">
+</head>
+<body>
+
+    {% include 'pages/header.html' %}
+
+    <main class="wishlist-page">
+
+        <h1>WISHLIST</h1>
+
+        <div class="wishlist-options">
+            <span>♡ &nbsp; FAVORITES</span>
+            <span>♡ &nbsp; SAVED ITEMS</span>
+            <span>♡ &nbsp; SHOP MY WISHLIST</span>
+        </div>
+
+        <div class="wishlist-grid">
+
+            <div class="wishlist-item">
+                <img src="{% static 'pages/images/polish1.webp' %}" alt="Nail Essentials">
+                <h3>My Nail Essentials</h3>
+                <p>System</p>
+                <button type="button">BUY - $100</button>
+            </div>
+
+            <div class="wishlist-item">
+                <img src="{% static 'pages/images/polish2.webp' %}" alt="Nail Polish">
+                <h3>Best Nail Polish</h3>
+                <p>System</p>
+                <button type="button">BUY - $12</button>
+            </div>
+
+            <div class="wishlist-item">
+                <img src="{% static 'pages/images/gel3.webp' %}" alt="Gel System">
+                <h3>Fall/Winter Gel</h3>
+                <p>System</p>
+                <button type="button">BUY - $12</button>
+            </div>
+
+        </div>
+
+    </main>
+
+    {% include 'pages/footer.html' %}
+
+</body>
+</html>

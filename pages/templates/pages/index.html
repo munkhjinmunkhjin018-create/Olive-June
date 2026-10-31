@@ -1,0 +1,142 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olive & June | Home</title>
+    <link rel="stylesheet" href="{% static 'pages/style.css' %}">
+</head>
+<body>
+
+    {% include 'pages/header.html' %}
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <img src="{% static 'pages/images/home-1.webp' %}" alt="Olive and June nail products">
+
+            <div class="hero-content">
+                <h1>Shop all the nail<br>happiness</h1>
+                <p>Everything for your best nails ever</p>
+                <span class="hero-small">GET STARTED</span>
+                <a href="{% url 'shop' %}" class="shop-btn">SHOP ALL</a>
+            </div>
+        </section>
+
+        <!-- MANI SYSTEM -->
+        <section class="mani-system" id="systems">
+            <div class="mani-image">
+                <img src="{% static 'pages/images/home-2.webp' %}" alt="Manicure system">
+            </div>
+
+            <div class="mani-text">
+                <h2>IT STARTS<br>WITH OUR<br>MANI<br>SYSTEM</h2>
+            </div>
+        </section>
+
+        <!-- FALL IN THE WILD -->
+        <section class="fall-section">
+            <h2>FALL IN THE WILD</h2>
+
+            <div class="fall-grid">
+                <div class="fall-item">
+                    <img src="{% static 'pages/images/polish1.webp' %}" alt="Ruby Crush">
+                    <p>Ruby crush</p>
+                </div>
+
+                <div class="fall-item">
+                    <img src="{% static 'pages/images/polish2.webp' %}" alt="Darj Academia">
+                    <p>Darj academia</p>
+                </div>
+
+                <div class="fall-item">
+                    <img src="{% static 'pages/images/polish3.webp' %}" alt="Donut Shop Nail">
+                    <p>Donut shop nail</p>
+                </div>
+
+                <div class="fall-item">
+                    <img src="{% static 'pages/images/polish4.webp' %}" alt="Cloud Core">
+                    <p>Cloud core</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BEST SELLER -->
+        <section class="bestseller-section" id="bestseller">
+            <h2>BEST SELLER</h2>
+
+            <div class="bestseller-grid">
+                <div class="best-item">
+                    <img src="{% static 'pages/images/gel1.webp' %}" alt="Actually Dramatic">
+                    <p>Actually Dramatic</p>
+                    <button type="button">ADD TO BAG - $12</button>
+                </div>
+
+                <div class="best-item">
+                    <img src="{% static 'pages/images/gel2.webp' %}" alt="Unbothered Energy">
+                    <p>Unbothered Energy</p>
+                    <button type="button">ADD TO BAG - $12</button>
+                </div>
+
+                <div class="best-item">
+                    <img src="{% static 'pages/images/gel3.webp' %}" alt="Neutral Territory">
+                    <p>Neutral Territory</p>
+                    <button type="button">ADD TO BAG - $12</button>
+                </div>
+
+                <div class="best-item">
+                    <img src="{% static 'pages/images/gel4.webp' %}" alt="Lowkey Perfect">
+                    <p>Lowkey Perfect</p>
+                    <button type="button">ADD TO BAG - $12</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMMUNITY -->
+        <section class="community-banner">
+            <div class="community-photo">
+                <img src="{% static 'pages/images/home-3.webp' %}" alt="Olive and June Community">
+            </div>
+
+            <div class="community-info">
+                <h3>everything you need to know to do<br>your own nails and more.</h3>
+                <a href="#community" class="learn-btn">LEARN MORE</a>
+            </div>
+        </section>
+
+        <!-- JOIN THE COMMUNITY -->
+        <section class="footer-social" id="community">
+            <h2>JOIN THE COMMUNITY</h2>
+            <p>LET'S GET SOCIAL!</p>
+
+            <div class="social-icons">
+                <a href="https://www.instagram.com/" aria-label="Instagram">
+                    <img src="{% static 'pages/logo/instagram.png' %}" alt="Instagram">
+                </a>
+
+                <a href="https://www.tiktok.com/" aria-label="TikTok">
+                    <img src="{% static 'pages/logo/tiktok.png' %}" alt="TikTok">
+                </a>
+
+                <a href="https://www.facebook.com/" aria-label="Facebook">
+                    <img src="{% static 'pages/logo/facebook.png' %}" alt="Facebook">
+                </a>
+
+                <a href="https://www.pinterest.com/" aria-label="Pinterest">
+                    <img src="{% static 'pages/logo/pinterest.png' %}" alt="Pinterest">
+                </a>
+            </div>
+
+            <h3>FREE SHIPPING, 10% OFF, AND<br>ALL THE PERKS</h3>
+            <a href="#newsletter" class="rewards-link">BECOME A MEMBER</a>
+        </section>
+
+    </main>
+
+    {% include 'pages/footer.html' %}
+
+</body>
+</html>

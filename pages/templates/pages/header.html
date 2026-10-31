@@ -1,0 +1,62 @@
+
+{% load static %}
+
+<section class="top-banner">
+    <img src="{% static 'pages/images/ten1.png' %}" alt="Nail colors">
+
+    <div class="banner-text">
+        <h2>GET DIPPED</h2>
+        <p>New Dip Powder is Here</p>
+        <a href="{% url 'shop' %}">MEET DIP</a>
+    </div>
+
+    <img src="{% static 'pages/images/ten2.png' %}" alt="Dip powder colors">
+</section>
+
+<header>
+    <nav class="navbar">
+
+        <div class="nav-left">
+            <span class="menu-icon">☰</span>
+
+            <a href="{% url 'home' %}" class="logo">
+                <img src="{% static 'pages/logo/home_logo.avif' %}" alt="Olive & June">
+            </a>
+        </div>
+
+        <div class="nav-links">
+            <a href="{% url 'shop' %}"
+               class="{% if active_page == 'shop' %}active{% endif %}">
+                SHOP ALL
+            </a>
+
+            <a href="{% url 'shop' %}#systems">SYSTEMS</a>
+            <a href="{% url 'shop' %}#polish">POLISH</a>
+            <a href="{% url 'shop' %}#gel">GEL</a>
+            <a href="{% url 'shop' %}#pressons">PRESS-ONS</a>
+            <a href="{% url 'shop' %}#care">CARE</a>
+            <a href="{% url 'shop' %}#dip">DIP POWDER</a>
+            <a href="{% url 'bestseller' %}"
+            class="{% if active_page == 'bestseller' %}active{% endif %}">
+                BEST SELLER
+            </a>
+        </div>
+
+        <div class="nav-icons">
+            <a href="{% url 'search' %}" aria-label="Search">
+                <img src="{% static 'pages/logo/loupe.png' %}" alt="Search">
+            </a>
+
+           
+            <a href="{% url 'wishlist' %}" aria-label="Wishlist"
+            class="{% if active_page == 'wishlist' %}active-icon{% endif %}">
+                <img src="{% static 'pages/logo/parcel.png' %}" alt="Wishlist">
+            </a>
+
+            <a href="{% url 'profile' %}" aria-label="Profile">
+                <img src="{% static 'pages/logo/happy-face.png' %}" alt="Profile">
+            </a>
+        </div>
+
+    </nav>
+</header>

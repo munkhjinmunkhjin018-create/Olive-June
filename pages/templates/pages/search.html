@@ -1,0 +1,92 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olive & June | Search</title>
+    <link rel="stylesheet" href="{% static 'pages/style.css' %}">
+</head>
+<body>
+
+    {% include 'pages/header.html' %}
+
+    <main class="search-page">
+
+        <div class="search-container">
+
+            <!-- SEARCH BAR -->
+            <div class="search-top">
+                <div class="search-field">
+                    <span>⌕</span>
+                    <input type="text" id="product-search" placeholder="Search" oninput="searchProducts()">
+                </div>
+
+                <a href="{% url 'home' %}" class="search-close">×</a>
+            </div>
+
+            <!-- PRODUCTS -->
+            <div class="search-products">
+
+                <div class="search-product">
+                    <img src="{% static 'pages/images/gel1.webp' %}" alt="Actually Dramatic">
+                    <p>Actually Dramatic</p>
+                    <button type="button">ADD TO BAG - $12</button>
+                </div>
+
+                <div class="search-product">
+                    <img src="{% static 'pages/images/gel2.webp' %}" alt="Unbothered Energy">
+                    <p>Unbothered Energy</p>
+                    <button type="button">ADD TO BAG - $12</button>
+                </div>
+
+                <div class="search-product">
+                    <img src="{% static 'pages/images/gel3.webp' %}" alt="Neutral Territory">
+                    <p>Neutral Territory</p>
+                    <button type="button">ADD TO BAG - $12</button>
+                </div>
+
+                <div class="search-product">
+                    <img src="{% static 'pages/images/polish1.webp' %}" alt="Ruby Crush">
+                    <p>Ruby Crush</p>
+                    <button type="button">ADD TO BAG - $12</button>
+                </div>
+
+                <div class="search-product">
+                    <img src="{% static 'pages/images/polish2.webp' %}" alt="Dark Academia">
+                    <p>Dark Academia</p>
+                    <button type="button">ADD TO BAG - $12</button>
+                </div>
+
+                <div class="search-product">
+                    <img src="{% static 'pages/images/polish3.webp' %}" alt="Donut Shop Nail">
+                    <p>Donut Shop Nail</p>
+                    <button type="button">ADD TO BAG - $12</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>
+        function searchProducts() {
+            let search = document.getElementById("product-search").value.toLowerCase();
+            let products = document.querySelectorAll(".search-product");
+
+            products.forEach(function(product) {
+                let name = product.querySelector("p").textContent.toLowerCase();
+
+                if (name.includes(search)) {
+                    product.style.display = "flex";
+                } else {
+                    product.style.display = "none";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+
+{% load static %}
+
+<footer>
+
+    <!-- 1. NEWSLETTER -->
+    <section class="newsletter" id="newsletter">
+
+        <div class="newsletter-item">
+            <h4>REFER FRIENDS & GET $10 OFF</h4>
+            <p>Share the nail happiness with your friends.</p>
+        </div>
+
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+            <label for="footer-email">
+                Sign up for emails to receive offers and updates.
+            </label>
+
+            <div class="email-box">
+                <input
+                    type="email"
+                    id="footer-email"
+                    placeholder="Email address"
+                    required
+                >
+                <button type="submit">SUBSCRIBE</button>
+            </div>
+        </form>
+
+        <div class="newsletter-item">
+            <h4>BECOME A MEMBER & SAVE</h4>
+            <p>Enjoy special offers and member perks.</p>
+        </div>
+
+    </section>
+
+
+    <!-- 2. FOOTER BOTTOM -->
+    <section class="footer-bottom">
+
+        <!-- ГАРЫН ЗУРАГ -->
+        <div class="footer-hand">
+            <div class="pink-circle"></div>
+
+            <img
+                src="{% static 'pages/images/home_hand.png' %}"
+                alt="Olive & June Manicure"
+            >
+        </div>
+
+        <!-- ABOUT -->
+        <div class="footer-column">
+            <h4>ABOUT</h4>
+
+            <a href="#our-story">Our Story</a>
+            <a href="#community">Our Community</a>
+            <a href="#careers">Careers</a>
+            <a href="#press">Press</a>
+        </div>
+
+        <!-- HELP -->
+        <div class="footer-column">
+            <h4>HELP</h4>
+
+            <a href="#faq">FAQs</a>
+            <a href="#shipping">Shipping & Returns</a>
+            <a href="#orders">Order Tracking</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+
+        <!-- CONTACT US -->
+        <div class="footer-column">
+            <h4>CONTACT US</h4>
+
+            <a href="mailto:hello@example.com">Email Us</a>
+            <a href="#support">Customer Support</a>
+            <a href="#accessibility">Accessibility</a>
+
+            <!-- SOCIAL ICONS -->
+            <div class="footer-social-small">
+
+                <a href="https://www.instagram.com/" aria-label="Instagram">
+                    <img
+                        src="{% static 'pages/logo/instagram.png' %}"
+                        alt="Instagram"
+                    >
+                </a>
+
+                <a href="https://www.tiktok.com/" aria-label="TikTok">
+                    <img
+                        src="{% static 'pages/logo/tiktok.png' %}"
+                        alt="TikTok"
+                    >
+                </a>
+
+                <a href="https://www.facebook.com/" aria-label="Facebook">
+                    <img
+                        src="{% static 'pages/logo/facebook.png' %}"
+                        alt="Facebook"
+                    >
+                </a>
+
+                <a href="https://www.pinterest.com/" aria-label="Pinterest">
+                    <img
+                        src="{% static 'pages/logo/pinterest.png' %}"
+                        alt="Pinterest"
+                    >
+                </a>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-copyright">
+
+        <span>© 2026 Olive & June. All rights reserved.</span>
+
+        <div>
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="#accessibility">Accessibility</a>
+        </div>
+
+    </div>
+
+</footer>

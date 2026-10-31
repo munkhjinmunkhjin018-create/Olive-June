@@ -1,0 +1,106 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olive & June | Profile</title>
+    <link rel="stylesheet" href="{% static 'pages/style.css' %}">
+</head>
+<body class="profile-body">
+
+    <main class="profile-page">
+
+        <!-- ЗҮҮН ЦЭС -->
+        <aside class="profile-sidebar">
+
+            <a href="{% url 'home' %}" class="profile-logo">
+                <img src="{% static 'pages/logo/home_logo.avif' %}" alt="Olive & June">
+            </a>
+
+            <nav class="profile-menu">
+                <a href="#orders">Orders</a>
+                <a href="{% url 'profile' %}" class="selected">Profile</a>
+                <a href="{% url 'shop' %}">Shop</a>
+                <a href="#club">The Olive You Club</a>
+            </nav>
+
+        </aside>
+
+        <!-- БАРУУН ХЭСЭГ -->
+        <section class="profile-content">
+
+            <div class="profile-section">
+                <div class="profile-heading">
+                    <h3>User Name</h3>
+                    <button type="button" onclick="editProfile()">Edit</button>
+                </div>
+
+                <div class="profile-field">
+                    <span id="profile-email">Email</span>
+                </div>
+            </div>
+
+            <div class="profile-section">
+                <div class="profile-heading">
+                    <h3>Address</h3>
+                    <button type="button" onclick="addAddress()">Add</button>
+                </div>
+
+                <div class="profile-field address-field">
+                    <span>♧ &nbsp; <span id="address-text">No Address</span></span>
+                </div>
+            </div>
+
+            <div class="profile-section">
+                <div class="profile-heading">
+                    <h3>Marketing preferences</h3>
+                    <button type="button" onclick="alert('Marketing preferences')">Add</button>
+                </div>
+
+                <div class="profile-field marketing-field">
+                    <span>✉ &nbsp; Email</span>
+
+                    <label class="profile-switch">
+                        <input type="checkbox" checked>
+                        <span class="profile-slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="profile-actions">
+                <button type="button" class="signout-btn" onclick="signOut()">Sign out</button>
+                <a href="{% url 'home' %}">Sign out of all device</a>
+            </div>
+
+        </section>
+
+        <!-- ХААХ ТОВЧ -->
+        <a href="{% url 'home' %}" class="profile-close" aria-label="Close">
+            <img src="{% static 'pages/logo/cancel.png' %}" alt="Close">
+        </a>
+    </main>
+
+    <script>
+        function editProfile() {
+            let email = prompt("Enter your email:");
+            if (email) {
+                document.getElementById("profile-email").textContent = email;
+            }
+        }
+
+        function addAddress() {
+            let address = prompt("Enter your address:");
+            if (address) {
+                document.getElementById("address-text").textContent = address;
+            }
+        }
+
+        function signOut() {
+            window.location.href = "{% url 'home' %}";
+        }
+    </script>
+
+</body>
+</html>
