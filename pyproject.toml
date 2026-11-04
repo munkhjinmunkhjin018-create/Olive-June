@@ -3,7 +3,8 @@ name = "olive-and-june"
 version = "1.0.0"
 requires-python = ">=3.12"
 dependencies = [
-    "Django==6.1.2"
+    "Django==6.1.2",
+    "whitenoise"
 ]
 
 [tool.vercel]
